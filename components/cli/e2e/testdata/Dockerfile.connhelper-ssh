@@ -1,4 +1,4 @@
-FROM docker:test-dind
+FROM docker:19-dind
 RUN apk --no-cache add shadow openssh-server && \
   groupadd -f docker && \
   useradd --create-home --shell /bin/sh --password $(head -c32 /dev/urandom | base64) penguin && \
